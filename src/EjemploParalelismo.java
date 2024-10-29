@@ -1,5 +1,12 @@
 import java.util.concurrent.RecursiveTask;
-
+/*
+Este código es un ejemplo de paralelismo utilizando la clase RecursiveTask de Java para
+realizar una suma en un gran arreglo de forma paralela. La clase EjemploParalelismo
+divide el arreglo en segmentos cada vez más pequeños hasta alcanzar un umbral
+(umbral = 1000), momento en el cual cada segmento se suma de manera secuencial.
+Si el segmento es grande, la tarea se divide en dos subtareas: tareaIzquierda y
+tareaDerecha. Usando fork() y join(), cada subtarea se ejecuta en paralelo,
+aprovechando varios núcleos para acelerar la ejecución de la suma.*/
 public class EjemploParalelismo extends RecursiveTask<Integer>
 {
     private int[] array;

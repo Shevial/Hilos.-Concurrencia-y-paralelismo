@@ -1,3 +1,12 @@
+
+/*
+Este código es un ejemplo de concurrencia utilizando hilos para dividir la tarea
+de sumar un arreglo grande. La clase SumaConcurrencia extiende Thread y calcula la
+suma parcial de un segmento del arreglo. En el main, se inicializan varios hilos
+(numHilos), cada uno sumando una porción del arreglo, y se inician en paralelo.
+Tras esperar que cada hilo complete (join()), se suman los resultados parciales para
+obtener la suma total, midiendo el tiempo de ejecución.*/
+
 public class SumaConcurrencia extends Thread {
     private int[] array;
     private int suma;
